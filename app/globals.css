@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050608;
+  --foreground: #F8F8F0;
+  
+  /* Dirty Dog Colors */
+  --dirtydog-green: #23D94E;
+  --dirtydog-green-soft: #34E36F;
+  --dirtydog-black: #050608;
+  --dirtydog-gray: #1A1A1F;
+  --dirtydog-offwhite: #F8F8F0;
+  --dirtydog-silver: #C8C8C8;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Dirty Dog Color Palette */
+  --color-dirtydog-green: #23D94E;
+  --color-dirtydog-green-soft: #34E36F;
+  --color-dirtydog-black: #050608;
+  --color-dirtydog-gray: #1A1A1F;
+  --color-dirtydog-offwhite: #F8F8F0;
+  --color-dirtydog-silver: #C8C8C8;
+}
+
+body {
+  background: var(--dirtydog-black);
+  color: var(--dirtydog-offwhite);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--dirtydog-green);
+  outline-offset: 2px;
+}
