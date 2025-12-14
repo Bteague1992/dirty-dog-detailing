@@ -1,9 +1,10 @@
 import { MapPin, ShieldCheck, Sparkles, Heart } from "lucide-react";
+import { primaryServiceArea } from "@/data/company-info";
 
 const trustPoints = [
   {
     icon: MapPin,
-    text: "Mobile service in Hickory, Morganton & nearby",
+    text: `Mobile service in ${primaryServiceArea}`,
   },
   {
     icon: ShieldCheck,
@@ -32,7 +33,7 @@ export function TrustStrip() {
                 className="flex items-center gap-3 text-center sm:text-left"
               >
                 <Icon
-                  className="h-6 w-6 text-dirtydog-green flex-shrink-0"
+                  className="h-6 w-6 text-dirtydog-green shrink-0"
                   aria-hidden="true"
                 />
                 <p className="text-sm font-medium text-dirtydog-offwhite">
@@ -46,4 +47,3 @@ export function TrustStrip() {
     </section>
   );
 }
-

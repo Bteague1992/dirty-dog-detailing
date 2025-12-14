@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { serviceAreaShort } from "@/data/company-info";
 
 export function AboutSection() {
   return (
@@ -25,8 +26,8 @@ export function AboutSection() {
             whether it's a daily driver, work truck, or family hauler.
           </p>
           <p className="text-lg text-dirtydog-silver">
-            Serving Hickory, Morganton, Connelly Springs, and surrounding areas
-            — we come to you, so you can get back to what matters.
+            Serving {serviceAreaShort} — we come to you, so you can get back to
+            what matters.
           </p>
           <div className="pt-4">
             <Button asChild variant="outline" size="lg">

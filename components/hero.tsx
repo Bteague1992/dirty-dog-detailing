@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { companyInfo } from "@/data/company-info";
+import { companyInfo, serviceAreaShort } from "@/data/company-info";
 
 const highlights = [
   "Mobile service — we come to you",
@@ -23,8 +23,8 @@ export function Hero() {
               <span className="text-dirtydog-green">Clean on Paint.</span>
             </h1>
             <p className="text-lg text-dirtydog-silver sm:text-xl">
-              Mobile auto detailing serving Hickory, Morganton, Connelly
-              Springs, and surrounding areas — with a signature{" "}
+              Mobile auto detailing serving {serviceAreaShort} — with a
+              signature{" "}
               <span className="font-semibold text-dirtydog-green">
                 Dirty Dog Clean™
               </span>{" "}
@@ -35,7 +35,7 @@ export function Hero() {
               {highlights.map((highlight, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Check
-                    className="h-5 w-5 text-dirtydog-green mt-0.5 flex-shrink-0"
+                    className="h-5 w-5 text-dirtydog-green mt-0.5 shrink-0"
                     aria-hidden="true"
                   />
                   <span className="text-base text-dirtydog-offwhite">

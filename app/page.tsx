@@ -1,27 +1,25 @@
 import { Hero } from "@/components/hero";
 import { TrustStrip } from "@/components/trust-strip";
 import { ServicesSection } from "@/components/services-section";
-import { DirtyLevelsSection } from "@/components/dirty-levels-section";
 import { ProcessSection } from "@/components/process-section";
 import { GalleryPlaceholder } from "@/components/gallery-placeholder";
 import { ReviewsSection } from "@/components/reviews-section";
 import { ServiceAreaSection } from "@/components/service-area-section";
 import { AboutSection } from "@/components/about-section";
 import { CTASection } from "@/components/cta-section";
-import { companyInfo } from "@/data/company-info";
+import { GlobalPoliciesSection } from "@/components/global-policies-section";
+import { companyInfo, primaryServiceArea } from "@/data/company-info";
+import { services } from "@/data/services";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title:
-    "Dirty Dog Detailing | Mobile Auto Detailing in Hickory, Morganton & Connelly Springs",
-  description:
-    "Mobile auto detailing service offering interior and exterior cleaning, deep interior restoration, and the signature Dirty Dog Clean™ throughout Hickory, Morganton, Connelly Springs, and surrounding North Carolina areas.",
+  title: `Dirty Dog Detailing | Mobile Auto Detailing in ${primaryServiceArea}`,
+  description: `Mobile auto detailing service offering interior and exterior cleaning, deep interior restoration, and the signature Dirty Dog Clean™ in ${primaryServiceArea} and nearby areas.`,
   keywords: [
     "mobile auto detailing",
     "car detailing",
-    "Hickory NC",
-    "Morganton NC",
-    "Connelly Springs NC",
+    "Newton NC",
     "interior detailing",
     "exterior detailing",
     "pet hair removal",
@@ -29,8 +27,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Dirty Dog Detailing | Mobile Auto Detailing",
-    description:
-      "Mean on dirt. Clean on paint. Mobile auto detailing serving Hickory, Morganton, Connelly Springs, and surrounding areas.",
+    description: `Mean on dirt. Clean on paint. Mobile auto detailing serving ${primaryServiceArea} and nearby areas.`,
     type: "website",
     locale: "en_US",
     siteName: "Dirty Dog Detailing",
@@ -56,38 +53,12 @@ export default function Home() {
     description:
       "Mobile auto detailing service offering interior and exterior cleaning, deep interior restoration, and the signature Dirty Dog Clean™.",
     slogan: companyInfo.tagline,
-    areaServed: [
-      {
-        "@type": "City",
-        name: "Hickory",
-        addressRegion: "NC",
-        addressCountry: "US",
-      },
-      {
-        "@type": "City",
-        name: "Morganton",
-        addressRegion: "NC",
-        addressCountry: "US",
-      },
-      {
-        "@type": "City",
-        name: "Connelly Springs",
-        addressRegion: "NC",
-        addressCountry: "US",
-      },
-      {
-        "@type": "City",
-        name: "Valdese",
-        addressRegion: "NC",
-        addressCountry: "US",
-      },
-      {
-        "@type": "City",
-        name: "Granite Falls",
-        addressRegion: "NC",
-        addressCountry: "US",
-      },
-    ],
+    areaServed: {
+      "@type": "City",
+      name: "Newton",
+      addressRegion: "NC",
+      addressCountry: "US",
+    },
     serviceType: [
       "Auto Detailing",
       "Car Detailing",
@@ -98,44 +69,14 @@ export default function Home() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Auto Detailing Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Exterior Basic Wash",
-            description:
-              "Exterior-only maintenance wash for light dirt and weekly/monthly upkeep.",
-          },
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.name,
+          description: service.shortDescription,
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Interior Basic Clean",
-            description:
-              "Interior reset for generally clean vehicles (light debris, normal use).",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Full Dirty Dog Detail™",
-            description:
-              "Complete interior + exterior detail for most vehicles.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Interior Deep Clean",
-            description:
-              "Heavy interior reset for kid messes, pet hair, spills, and neglected vehicles.",
-          },
-        },
-      ],
+      })),
     },
   };
 
@@ -149,7 +90,21 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <ServicesSection />
-        <DirtyLevelsSection />
+        <GlobalPoliciesSection />
+        <div className="bg-dirtydog-black py-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-sm text-dirtydog-silver">
+              Looking for mobile auto detailing in{" "}
+              <Link
+                href="/mobile-auto-detailing-newton"
+                className="text-dirtydog-green hover:text-dirtydog-green-soft underline font-semibold"
+              >
+                Newton, NC
+              </Link>
+              ? Learn more.
+            </p>
+          </div>
+        </div>
         <ProcessSection />
         {/* <GalleryPlaceholder /> */}
         <ReviewsSection />

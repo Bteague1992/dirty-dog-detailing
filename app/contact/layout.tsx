@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { companyInfo } from "@/data/company-info";
-import { serviceAreas } from "@/data/service-area";
+import { companyInfo, primaryServiceArea } from "@/data/company-info";
 
 export const metadata: Metadata = {
   title: "Contact Us | Dirty Dog Detailing",
-  description:
-    "Get in touch with Dirty Dog Detailing. Book an appointment, ask questions, or learn more about our mobile auto detailing services in Hickory, Morganton, Connelly Springs, and surrounding areas.",
+  description: `Get in touch with Dirty Dog Detailing. Book an appointment, ask questions, or learn more about our mobile auto detailing services in ${primaryServiceArea} and nearby areas.`,
   openGraph: {
     title: "Contact Us | Dirty Dog Detailing",
     description:
@@ -29,34 +27,17 @@ export default function ContactLayout({
     priceRange: "$$",
     description:
       "Mobile auto detailing service offering interior and exterior cleaning, deep interior restoration, and the signature Dirty Dog Clean™.",
-    areaServed: serviceAreas
-      .filter((area) => area !== "Nearby surrounding areas")
-      .map((area) => {
-        const cityName = area.replace(", NC", "");
-        return {
-          "@type": "City",
-          name: cityName,
-          addressRegion: "NC",
-          addressCountry: "US",
-        };
-      }),
-    address: {
-      "@type": "PostalAddress",
+    areaServed: {
+      "@type": "City",
+      name: "Newton",
       addressRegion: "NC",
       addressCountry: "US",
     },
-    geo: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: "35.7331",
-        longitude: "-81.3412",
-      },
-      geoRadius: {
-        "@type": "Distance",
-        value: "25",
-        unitCode: "MI",
-      },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Newton",
+      addressRegion: "NC",
+      addressCountry: "US",
     },
   };
 

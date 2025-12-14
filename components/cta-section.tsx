@@ -27,7 +27,10 @@ export function CTASection() {
               size="lg"
               className="w-full sm:w-auto"
             >
-              <Link href="/contact">
+              <Link
+                href="/contact"
+                className="flex items-center justify-center"
+              >
                 <Mail className="h-4 w-4 mr-2" aria-hidden="true" />
                 Contact Us
               </Link>

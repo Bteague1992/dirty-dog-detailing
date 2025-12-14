@@ -13,7 +13,7 @@ export function ServicesSection() {
             Choose Your Dirty Dog Detail
           </h2>
           <p className="text-lg text-dirtydog-silver max-w-2xl mx-auto">
-            Clear services. Straightforward pricing. No nonsense.
+            Clear services. Straightforward pricing. No surprise surcharges.
           </p>
         </div>
 

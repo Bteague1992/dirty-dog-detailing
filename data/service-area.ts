@@ -1,8 +1,5 @@
+// Service area - Newton focused
 export const serviceAreas = [
-  "Hickory, NC",
-  "Morganton, NC",
-  "Connelly Springs, NC",
-  "Valdese, NC",
-  "Granite Falls, NC",
+  "Newton, NC",
   "Nearby surrounding areas",
 ];

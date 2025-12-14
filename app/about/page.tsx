@@ -2,13 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Heart, MapPin, Sparkles, Shield } from "lucide-react";
-import { companyInfo } from "@/data/company-info";
+import { companyInfo, serviceAreaShort } from "@/data/company-info";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | Dirty Dog Detailing",
-  description:
-    "Learn about Dirty Dog Detailing - a locally owned and operated mobile auto detailing service serving Hickory, Morganton, Connelly Springs, and surrounding North Carolina areas.",
+  description: `Learn about Dirty Dog Detailing - a locally owned and operated mobile auto detailing service serving ${serviceAreaShort}.`,
   openGraph: {
     title: "About Us | Dirty Dog Detailing",
     description:
@@ -27,7 +26,7 @@ const values = [
     icon: Shield,
     title: "Honest Pricing",
     description:
-      "No hidden fees, no surprise charges. Our pricing is transparent and fair, with clear dirty level surcharges so you know what to expect.",
+      "No hidden fees, no surprise charges. Our pricing is transparent and fair. If your vehicle matches the service scope, your price will not change on arrival.",
   },
   {
     icon: Heart,
@@ -77,8 +76,7 @@ export default function AboutPage() {
                 whether it's a daily driver, work truck, or family hauler.
               </p>
               <p className="text-lg text-dirtydog-silver leading-relaxed">
-                Serving Hickory, Morganton, Connelly Springs, and surrounding
-                areas — we come to you, so you can get back to what matters.
+                Serving {serviceAreaShort} — we come to you, so you can get back to what matters.
               </p>
             </div>
 
@@ -175,35 +173,8 @@ export default function AboutPage() {
                 Our Service Area
               </h2>
               <p className="text-base text-dirtydog-silver mb-4">
-                We're proud to serve the following areas with our mobile
-                detailing service:
+                We primarily serve {serviceAreaShort}. If you're just outside Newton, contact us and we'll confirm availability.
               </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-base text-dirtydog-silver">
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-dirtydog-green" aria-hidden="true" />
-                  Hickory, NC
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-dirtydog-green" aria-hidden="true" />
-                  Morganton, NC
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-dirtydog-green" aria-hidden="true" />
-                  Connelly Springs, NC
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-dirtydog-green" aria-hidden="true" />
-                  Valdese, NC
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-dirtydog-green" aria-hidden="true" />
-                  Granite Falls, NC
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-dirtydog-green" aria-hidden="true" />
-                  Nearby surrounding areas
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -239,4 +210,3 @@ export default function AboutPage() {
     </main>
   );
 }
-

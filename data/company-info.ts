@@ -17,7 +17,11 @@ export const companyInfo: CompanyInfo = {
   },
   email: "dirtydogdetailing@proton.me",
   bookingUrl:
-    "https://clienthub.getjobber.com/hubs/1960ae80-924e-4efb-8087-3ecb1a0e5004/public/requests/2112808/new",
+    "https://app.squareup.com/appointments/book/57g7r1ig5r0r0c/LTT9N9N1KFG1Z/start",
   tagline: "Mean on dirt. Clean on paint.",
 };
 
+// Service area constants
+export const primaryServiceArea = "Newton, NC";
+export const serviceAreaShort = "Newton, NC and nearby areas";
+export const serviceAreaLong = "Newton, NC";

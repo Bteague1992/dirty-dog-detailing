@@ -10,9 +10,8 @@ import { companyInfo } from "@/data/company-info";
 
 const navLinks = [
   { href: "/services", label: "Services" },
-  { href: "/dirty-levels", label: "Dirty Levels" },
   // { href: "#gallery", label: "Gallery" },
-  { href: "#reviews", label: "Reviews" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -54,7 +53,13 @@ export function SiteHeader() {
             </Link>
           ))}
           <Button asChild size="default" className="ml-4">
-            <Link href="/contact">Book Now</Link>
+            <Link
+              target="_blank"
+              href={companyInfo.bookingUrl}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Book Now
+            </Link>
           </Button>
         </div>
 

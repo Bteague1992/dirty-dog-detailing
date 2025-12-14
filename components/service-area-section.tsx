@@ -1,5 +1,6 @@
 import { serviceAreas } from "@/data/service-area";
 import { MapPin } from "lucide-react";
+import { primaryServiceArea } from "@/data/company-info";
 
 export function ServiceAreaSection() {
   return (
@@ -10,7 +11,7 @@ export function ServiceAreaSection() {
             Where We Roam
           </h2>
           <p className="text-lg text-dirtydog-silver max-w-2xl mx-auto mb-8">
-            Mobile-only — we come to your driveway or workplace, as long as
+            Mobile-only — we come to your driveway or workplace in {primaryServiceArea} and nearby areas, as long as
             there's space to work.
           </p>
         </div>
@@ -23,7 +24,7 @@ export function ServiceAreaSection() {
                 className="flex items-center gap-3 text-dirtydog-offwhite"
               >
                 <MapPin
-                  className="h-5 w-5 text-dirtydog-green flex-shrink-0"
+                  className="h-5 w-5 text-dirtydog-green shrink-0"
                   aria-hidden="true"
                 />
                 <span>{area}</span>
@@ -35,4 +36,3 @@ export function ServiceAreaSection() {
     </section>
   );
 }
-

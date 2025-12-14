@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Mail, Phone, MapPin, MessageSquare, ExternalLink } from "lucide-react";
-import { serviceAreas } from "@/data/service-area";
-import { companyInfo } from "@/data/company-info";
+import {
+  companyInfo,
+  primaryServiceArea,
+  serviceAreaShort,
+} from "@/data/company-info";
 
 const contactMethods = [
   {
@@ -41,9 +44,15 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-lg text-dirtydog-silver sm:text-xl">
-              Ready for a Dirty Dog Clean™? Have questions about our services?
-              We're here to help. Book online, give us a call, or send us an
-              email.
+              Ready for a Dirty Dog Clean™? Have questions about our services in{" "}
+              {primaryServiceArea}? We're here to help. Book online, give us a
+              call, or send us an email.
+            </p>
+            <p className="text-sm text-dirtydog-silver mt-4">
+              <strong className="text-dirtydog-offwhite">
+                $45 deposit required to reserve
+              </strong>{" "}
+              your appointment.
             </p>
           </div>
         </div>
@@ -119,24 +128,10 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-dirtydog-silver mb-4">
-                We provide mobile auto detailing services to the following
-                areas:
+                We primarily serve {primaryServiceArea}. If you're just outside
+                Newton, contact us and we'll confirm availability.
               </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-                {serviceAreas.map((area) => (
-                  <li
-                    key={area}
-                    className="flex items-center gap-2 text-sm text-dirtydog-offwhite"
-                  >
-                    <MapPin
-                      className="h-4 w-4 text-dirtydog-green flex-shrink-0"
-                      aria-hidden="true"
-                    />
-                    {area}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-sm text-dirtydog-silver mt-4">
+              <p className="text-sm text-dirtydog-silver">
                 <strong>Mobile-only service:</strong> We come to your driveway
                 or workplace, as long as there's space to work. No need to drive
                 anywhere — we bring everything to you.
@@ -172,7 +167,7 @@ export default function ContactPage() {
                       book online
                     </a>
                     . You can also call or email us to schedule. We require a
-                    deposit to secure your appointment.
+                    $45 deposit to secure your appointment.
                   </p>
                 </CardContent>
               </Card>
@@ -202,22 +197,17 @@ export default function ContactPage() {
               <Card className="bg-dirtydog-black border-dirtydog-silver/20">
                 <CardHeader>
                   <CardTitle className="text-lg text-dirtydog-offwhite">
-                    How does the dirty level system work?
+                    How does pricing work?
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-dirtydog-silver">
-                    Our{" "}
-                    <Link
-                      href="/dirty-levels"
-                      className="text-dirtydog-green hover:text-dirtydog-green-soft underline font-semibold"
-                    >
-                      dirty level system
-                    </Link>{" "}
-                    helps us set fair pricing based on your vehicle's condition.
-                    Level 1 has no surcharge, Level 2 adds $50, and Level 3
-                    (DIRTY DOG) adds $125. We'll assess your vehicle during
-                    booking or upon arrival.
+                    Our pricing is transparent and straightforward. One-time
+                    prices are shown for each service and vehicle size. We also
+                    offer subscription discounts (15% off monthly, 10% off
+                    bi-monthly) for regular maintenance. Restoration-level
+                    vehicles require a phone call for a custom quote. We'll
+                    assess your vehicle during booking or upon arrival.
                   </p>
                 </CardContent>
               </Card>
@@ -225,7 +215,7 @@ export default function ContactPage() {
               <Card className="bg-dirtydog-black border-dirtydog-silver/20">
                 <CardHeader>
                   <CardTitle className="text-lg text-dirtydog-offwhite">
-                    Do you come to my location?
+                    Do you come to my location in {primaryServiceArea}?
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

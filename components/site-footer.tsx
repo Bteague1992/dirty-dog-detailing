@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { serviceAreas } from "@/data/service-area";
-import { companyInfo } from "@/data/company-info";
+import { companyInfo, primaryServiceArea } from "@/data/company-info";
 
 export function SiteFooter() {
   return (
@@ -34,10 +34,10 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/dirty-levels"
+                  href="/mobile-auto-detailing-newton"
                   className="text-sm text-dirtydog-silver hover:text-dirtydog-green transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dirtydog-green focus-visible:ring-offset-2 rounded"
                 >
-                  Dirty Levels
+                  Mobile Auto Detailing in Newton, NC
                 </Link>
               </li>
               <li>
@@ -50,7 +50,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#reviews"
+                  href="/reviews"
                   className="text-sm text-dirtydog-silver hover:text-dirtydog-green transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dirtydog-green focus-visible:ring-offset-2 rounded"
                 >
                   Reviews
@@ -75,7 +75,7 @@ export function SiteFooter() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone
-                  className="h-4 w-4 text-dirtydog-green mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-dirtydog-green mt-0.5 shrink-0"
                   aria-hidden="true"
                 />
                 <a
@@ -87,7 +87,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-2">
                 <Mail
-                  className="h-4 w-4 text-dirtydog-green mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-dirtydog-green mt-0.5 shrink-0"
                   aria-hidden="true"
                 />
                 <a
@@ -99,11 +99,11 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin
-                  className="h-4 w-4 text-dirtydog-green mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-dirtydog-green mt-0.5 shrink-0"
                   aria-hidden="true"
                 />
                 <span className="text-sm text-dirtydog-silver">
-                  Mobile service in Hickory, Morganton & surrounding areas
+                  Mobile service in {primaryServiceArea}
                 </span>
               </li>
             </ul>

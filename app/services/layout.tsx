@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { services } from "@/data/services";
-import { companyInfo } from "@/data/company-info";
+import { companyInfo, primaryServiceArea } from "@/data/company-info";
 
 export const metadata: Metadata = {
   title: "Services & Pricing | Dirty Dog Detailing",
-  description:
-    "Detailed information about all our auto detailing services including Exterior Basic Wash, Interior Basic Clean, Full Dirty Dog Detail™, and Interior Deep Clean. Transparent pricing for all vehicle sizes.",
+  description: `Detailed information about all our auto detailing services including Exterior Detail, Interior Detail, Full Detail, and Restoration services. Transparent pricing for all vehicle sizes in ${primaryServiceArea}.`,
   openGraph: {
     title: "Services & Pricing | Dirty Dog Detailing",
     description:
@@ -31,32 +30,36 @@ export default function ServicesLayout({
     areaServed: {
       "@type": "State",
       name: "North Carolina",
-      containsPlace: [
-        { "@type": "City", name: "Hickory", addressRegion: "NC" },
-        { "@type": "City", name: "Morganton", addressRegion: "NC" },
-        { "@type": "City", name: "Connelly Springs", addressRegion: "NC" },
-        { "@type": "City", name: "Valdese", addressRegion: "NC" },
-        { "@type": "City", name: "Granite Falls", addressRegion: "NC" },
-      ],
+      containsPlace: {
+        "@type": "City",
+        name: "Newton",
+        addressRegion: "NC",
+      },
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Auto Detailing Services",
-      itemListElement: services.map((service, index) => ({
-        "@type": "Offer",
-        position: index + 1,
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-          description: service.shortDescription,
-          offers: {
-            "@type": "AggregateOffer",
-            priceCurrency: "USD",
-            lowPrice: Math.min(...service.pricing.map((p) => p.price)).toString(),
-            highPrice: Math.max(...service.pricing.map((p) => p.price)).toString(),
+      itemListElement: services
+        .filter((service) => service.oneOffPricing.length > 0)
+        .map((service, index) => ({
+          "@type": "Offer",
+          position: index + 1,
+          itemOffered: {
+            "@type": "Service",
+            name: service.name,
+            description: service.shortDescription,
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "USD",
+              lowPrice: Math.min(
+                ...service.oneOffPricing.map((p) => p.price)
+              ).toString(),
+              highPrice: Math.max(
+                ...service.oneOffPricing.map((p) => p.price)
+              ).toString(),
+            },
           },
-        },
-      })),
+        })),
     },
   };
 
@@ -70,4 +73,3 @@ export default function ServicesLayout({
     </>
   );
 }
-

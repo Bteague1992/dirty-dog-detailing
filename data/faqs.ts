@@ -7,7 +7,7 @@ export const faqs: FAQ[] = [
   {
     question: "Do you come to my home or workplace?",
     answer:
-      "Yes. We are a mobile detailing service and travel to your home or workplace as long as power and water access requirements are met.",
+      "Yes. We are a mobile detailing service and travel to your home or workplace in Newton, NC and nearby areas as long as power and water access requirements are met.",
   },
   {
     question: "Do you need access to power and water?",
@@ -17,7 +17,7 @@ export const faqs: FAQ[] = [
   {
     question: "What areas do you service?",
     answer:
-      "We service Hickory, Morganton, Connelly Springs, Valdese, Granite Falls, and surrounding areas. Travel fees may apply for locations outside our primary service zone.",
+      "We primarily serve Newton, NC. If you're just outside Newton, contact us and we'll confirm availability.",
   },
   {
     question: "How long does a detail take?",
