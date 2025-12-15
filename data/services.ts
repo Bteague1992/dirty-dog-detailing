@@ -38,10 +38,10 @@ export const services: Service[] = [
       "Hand wash, wheels, bug removal, and a spray sealant for 1–2 months of protection. Not for heavy mud, caked-on dirt, or neglected vehicles.",
     category: "exterior",
     oneOffPricing: [
-      { vehicleSize: "small", price: 69, timeEstimate: "1–1.5 hours" },
-      { vehicleSize: "medium", price: 79, timeEstimate: "1–1.5 hours" },
-      { vehicleSize: "large", price: 89, timeEstimate: "1.5–2 hours" },
-      { vehicleSize: "xl", price: 99, timeEstimate: "2–2.5 hours" },
+      { vehicleSize: "small", price: 89, timeEstimate: "1.5-2 hours" },
+      { vehicleSize: "medium", price: 99, timeEstimate: "2-2.5 hours" },
+      { vehicleSize: "large", price: 109, timeEstimate: "2.5–3 hours" },
+      { vehicleSize: "xl", price: 119, timeEstimate: "2.5-3.5 hours" },
     ],
     // subscriptionPricing: {
     //   monthly: [
@@ -80,10 +80,10 @@ export const services: Service[] = [
       "Vacuum, wipe-down, and light detailing for normally used interiors. Not for extreme pet hair, bodily fluids, mold, or trash-packed vehicles (quote-only).",
     category: "interior",
     oneOffPricing: [
-      { vehicleSize: "small", price: 109, timeEstimate: "1.5–2.5 hours" },
-      { vehicleSize: "medium", price: 129, timeEstimate: "2–3 hours" },
-      { vehicleSize: "large", price: 149, timeEstimate: "2.5–3.5 hours" },
-      { vehicleSize: "xl", price: 169, timeEstimate: "3–4 hours" },
+      { vehicleSize: "small", price: 139, timeEstimate: "2-2.5 hours" },
+      { vehicleSize: "medium", price: 149, timeEstimate: "2.5-3 hours" },
+      { vehicleSize: "large", price: 159, timeEstimate: "3-3.5 hours" },
+      { vehicleSize: "xl", price: 169, timeEstimate: "3.5-4 hours" },
     ],
     // subscriptionPricing: {
     //   monthly: [
@@ -121,10 +121,10 @@ export const services: Service[] = [
     category: "full",
     isPopular: true,
     oneOffPricing: [
-      { vehicleSize: "small", price: 159, timeEstimate: "2.5–3.5 hours" },
-      { vehicleSize: "medium", price: 189, timeEstimate: "3–4 hours" },
-      { vehicleSize: "large", price: 219, timeEstimate: "3.5–4.5 hours" },
-      { vehicleSize: "xl", price: 249, timeEstimate: "4–5.5 hours" },
+      { vehicleSize: "small", price: 189, timeEstimate: "4-4.5 hours" },
+      { vehicleSize: "medium", price: 199, timeEstimate: "4.5-5 hours" },
+      { vehicleSize: "large", price: 209, timeEstimate: "5-5.5 hours" },
+      { vehicleSize: "xl", price: 229, timeEstimate: "5.5-6 hours" },
     ],
     // subscriptionPricing: {
     //   monthly: [
