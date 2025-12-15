@@ -34,6 +34,14 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
+                  href="/fleet-maintenance"
+                  className="text-sm text-dirtydog-silver hover:text-dirtydog-green transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dirtydog-green focus-visible:ring-offset-2 rounded"
+                >
+                  Fleet Maintenance
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/mobile-auto-detailing-newton"
                   className="text-sm text-dirtydog-silver hover:text-dirtydog-green transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dirtydog-green focus-visible:ring-offset-2 rounded"
                 >
@@ -62,6 +70,14 @@ export function SiteFooter() {
                   className="text-sm text-dirtydog-silver hover:text-dirtydog-green transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dirtydog-green focus-visible:ring-offset-2 rounded"
                 >
                   FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gift-cards"
+                  className="text-sm text-dirtydog-silver hover:text-dirtydog-green transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dirtydog-green focus-visible:ring-offset-2 rounded"
+                >
+                  Gift Cards
                 </Link>
               </li>
             </ul>

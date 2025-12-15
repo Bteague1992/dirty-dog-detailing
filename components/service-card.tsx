@@ -153,19 +153,20 @@ export function ServiceCard({ service }: ServiceCardProps) {
             </div>
           )}
 
+          <p className="text-xs text-dirtydog-silver mb-2 text-center">
+            Save with subscription:{" "}
+            <span className="font-semibold text-dirtydog-green">
+              15% monthly
+            </span>{" "}
+            /{" "}
+            <span className="font-semibold text-dirtydog-green">
+              10% bi-monthly
+            </span>
+          </p>
+
           {/* Subscription Pricing Accordion */}
           {service.subscriptionPricing && (
             <div>
-              <p className="text-xs text-dirtydog-silver mb-2 text-center">
-                Save with subscription:{" "}
-                <span className="font-semibold text-dirtydog-green">
-                  15% monthly
-                </span>{" "}
-                /{" "}
-                <span className="font-semibold text-dirtydog-green">
-                  10% bi-monthly
-                </span>
-              </p>
               <Accordion type="single" defaultValue={undefined}>
                 <AccordionItem value="subscription">
                   <AccordionTrigger>Show subscription pricing</AccordionTrigger>

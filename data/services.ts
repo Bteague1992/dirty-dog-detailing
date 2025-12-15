@@ -38,25 +38,25 @@ export const services: Service[] = [
       "Hand wash, wheels, bug removal, and a spray sealant for 1–2 months of protection. Not for heavy mud, caked-on dirt, or neglected vehicles.",
     category: "exterior",
     oneOffPricing: [
-      { vehicleSize: "small", price: 75, timeEstimate: "1–1.5 hours" },
-      { vehicleSize: "medium", price: 85, timeEstimate: "1–1.5 hours" },
-      { vehicleSize: "large", price: 95, timeEstimate: "1.5–2 hours" },
-      { vehicleSize: "xl", price: 115, timeEstimate: "2–2.5 hours" },
+      { vehicleSize: "small", price: 69, timeEstimate: "1–1.5 hours" },
+      { vehicleSize: "medium", price: 79, timeEstimate: "1–1.5 hours" },
+      { vehicleSize: "large", price: 89, timeEstimate: "1.5–2 hours" },
+      { vehicleSize: "xl", price: 99, timeEstimate: "2–2.5 hours" },
     ],
-    subscriptionPricing: {
-      monthly: [
-        { vehicleSize: "small", price: 64, timeEstimate: "1–1.5 hours" },
-        { vehicleSize: "medium", price: 72, timeEstimate: "1–1.5 hours" },
-        { vehicleSize: "large", price: 81, timeEstimate: "1.5–2 hours" },
-        { vehicleSize: "xl", price: 98, timeEstimate: "2–2.5 hours" },
-      ],
-      bimonthly: [
-        { vehicleSize: "small", price: 68, timeEstimate: "1–1.5 hours" },
-        { vehicleSize: "medium", price: 77, timeEstimate: "1–1.5 hours" },
-        { vehicleSize: "large", price: 86, timeEstimate: "1.5–2 hours" },
-        { vehicleSize: "xl", price: 104, timeEstimate: "2–2.5 hours" },
-      ],
-    },
+    // subscriptionPricing: {
+    //   monthly: [
+    //     { vehicleSize: "small", price: 64, timeEstimate: "1–1.5 hours" },
+    //     { vehicleSize: "medium", price: 72, timeEstimate: "1–1.5 hours" },
+    //     { vehicleSize: "large", price: 81, timeEstimate: "1.5–2 hours" },
+    //     { vehicleSize: "xl", price: 98, timeEstimate: "2–2.5 hours" },
+    //   ],
+    //   bimonthly: [
+    //     { vehicleSize: "small", price: 68, timeEstimate: "1–1.5 hours" },
+    //     { vehicleSize: "medium", price: 77, timeEstimate: "1–1.5 hours" },
+    //     { vehicleSize: "large", price: 86, timeEstimate: "1.5–2 hours" },
+    //     { vehicleSize: "xl", price: 104, timeEstimate: "2–2.5 hours" },
+    //   ],
+    // },
     inclusions: [
       "Hand wash",
       "Wheels & tires cleaned",
@@ -80,25 +80,25 @@ export const services: Service[] = [
       "Vacuum, wipe-down, and light detailing for normally used interiors. Not for extreme pet hair, bodily fluids, mold, or trash-packed vehicles (quote-only).",
     category: "interior",
     oneOffPricing: [
-      { vehicleSize: "small", price: 119, timeEstimate: "1.5–2.5 hours" },
-      { vehicleSize: "medium", price: 139, timeEstimate: "2–3 hours" },
-      { vehicleSize: "large", price: 159, timeEstimate: "2.5–3.5 hours" },
-      { vehicleSize: "xl", price: 179, timeEstimate: "3–4 hours" },
+      { vehicleSize: "small", price: 109, timeEstimate: "1.5–2.5 hours" },
+      { vehicleSize: "medium", price: 129, timeEstimate: "2–3 hours" },
+      { vehicleSize: "large", price: 149, timeEstimate: "2.5–3.5 hours" },
+      { vehicleSize: "xl", price: 169, timeEstimate: "3–4 hours" },
     ],
-    subscriptionPricing: {
-      monthly: [
-        { vehicleSize: "small", price: 101, timeEstimate: "1.5–2.5 hours" },
-        { vehicleSize: "medium", price: 118, timeEstimate: "2–3 hours" },
-        { vehicleSize: "large", price: 135, timeEstimate: "2.5–3.5 hours" },
-        { vehicleSize: "xl", price: 152, timeEstimate: "3–4 hours" },
-      ],
-      bimonthly: [
-        { vehicleSize: "small", price: 107, timeEstimate: "1.5–2.5 hours" },
-        { vehicleSize: "medium", price: 125, timeEstimate: "2–3 hours" },
-        { vehicleSize: "large", price: 143, timeEstimate: "2.5–3.5 hours" },
-        { vehicleSize: "xl", price: 161, timeEstimate: "3–4 hours" },
-      ],
-    },
+    // subscriptionPricing: {
+    //   monthly: [
+    //     { vehicleSize: "small", price: 101, timeEstimate: "1.5–2.5 hours" },
+    //     { vehicleSize: "medium", price: 118, timeEstimate: "2–3 hours" },
+    //     { vehicleSize: "large", price: 135, timeEstimate: "2.5–3.5 hours" },
+    //     { vehicleSize: "xl", price: 152, timeEstimate: "3–4 hours" },
+    //   ],
+    //   bimonthly: [
+    //     { vehicleSize: "small", price: 107, timeEstimate: "1.5–2.5 hours" },
+    //     { vehicleSize: "medium", price: 125, timeEstimate: "2–3 hours" },
+    //     { vehicleSize: "large", price: 143, timeEstimate: "2.5–3.5 hours" },
+    //     { vehicleSize: "xl", price: 161, timeEstimate: "3–4 hours" },
+    //   ],
+    // },
     inclusions: [
       "Full vacuum (seats, floors, mats, trunk)",
       "Wipe-down of interior surfaces",
@@ -121,25 +121,25 @@ export const services: Service[] = [
     category: "full",
     isPopular: true,
     oneOffPricing: [
-      { vehicleSize: "small", price: 169, timeEstimate: "2.5–3.5 hours" },
-      { vehicleSize: "medium", price: 199, timeEstimate: "3–4 hours" },
-      { vehicleSize: "large", price: 229, timeEstimate: "3.5–4.5 hours" },
-      { vehicleSize: "xl", price: 259, timeEstimate: "4–5.5 hours" },
+      { vehicleSize: "small", price: 159, timeEstimate: "2.5–3.5 hours" },
+      { vehicleSize: "medium", price: 189, timeEstimate: "3–4 hours" },
+      { vehicleSize: "large", price: 219, timeEstimate: "3.5–4.5 hours" },
+      { vehicleSize: "xl", price: 249, timeEstimate: "4–5.5 hours" },
     ],
-    subscriptionPricing: {
-      monthly: [
-        { vehicleSize: "small", price: 144, timeEstimate: "2.5–3.5 hours" },
-        { vehicleSize: "medium", price: 169, timeEstimate: "3–4 hours" },
-        { vehicleSize: "large", price: 195, timeEstimate: "3.5–4.5 hours" },
-        { vehicleSize: "xl", price: 220, timeEstimate: "4–5.5 hours" },
-      ],
-      bimonthly: [
-        { vehicleSize: "small", price: 152, timeEstimate: "2.5–3.5 hours" },
-        { vehicleSize: "medium", price: 179, timeEstimate: "3–4 hours" },
-        { vehicleSize: "large", price: 206, timeEstimate: "3.5–4.5 hours" },
-        { vehicleSize: "xl", price: 233, timeEstimate: "4–5.5 hours" },
-      ],
-    },
+    // subscriptionPricing: {
+    //   monthly: [
+    //     { vehicleSize: "small", price: 144, timeEstimate: "2.5–3.5 hours" },
+    //     { vehicleSize: "medium", price: 169, timeEstimate: "3–4 hours" },
+    //     { vehicleSize: "large", price: 195, timeEstimate: "3.5–4.5 hours" },
+    //     { vehicleSize: "xl", price: 220, timeEstimate: "4–5.5 hours" },
+    //   ],
+    //   bimonthly: [
+    //     { vehicleSize: "small", price: 152, timeEstimate: "2.5–3.5 hours" },
+    //     { vehicleSize: "medium", price: 179, timeEstimate: "3–4 hours" },
+    //     { vehicleSize: "large", price: 206, timeEstimate: "3.5–4.5 hours" },
+    //     { vehicleSize: "xl", price: 233, timeEstimate: "4–5.5 hours" },
+    //   ],
+    // },
     inclusions: [
       "Everything in Exterior Detail",
       "Everything in Interior Detail",

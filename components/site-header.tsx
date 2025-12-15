@@ -10,10 +10,12 @@ import { companyInfo } from "@/data/company-info";
 
 const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/fleet-maintenance", label: "Fleet Maintenance" },
   // { href: "#gallery", label: "Gallery" },
   { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
+  { href: "/gift-cards", label: "Gift Cards" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -23,7 +25,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-dirtydog-silver/20 bg-dirtydog-black/95 backdrop-blur-sm">
       <nav
-        className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
+        className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
         {/* Logo */}
@@ -38,7 +40,7 @@ export function SiteHeader() {
             height={100}
             className="w-10 h-10"
           />
-          <span>Dirty Dog Detailing</span>
+          <span className="hidden lg:block">Dirty Dog Detailing</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -52,7 +54,7 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <Button asChild size="default" className="ml-4">
+          <Button asChild size="default" className="hidden lg:block ml-4">
             <Link
               target="_blank"
               href={companyInfo.bookingUrl}
